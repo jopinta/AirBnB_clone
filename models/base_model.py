@@ -21,11 +21,11 @@ class BaseModel:
 
     def to_dict(self):
         """ Dictionary containing keys/values """
-        dict_ = dict(self.__dict__)
-        dict_.update({"__class__": self.__class__.__name__,
+        dicc = dict(self.__dict__)
+        dicc.update({"__class__": self.__class__.__name__,
                            "created_at": str(((self.created_at).isoformat())),
                            "updated_at": str(((self.updated_at).isoformat()))})
-        return dict_
+        return dicc
 
     def save(self):
         """Updates with the datetime"""
