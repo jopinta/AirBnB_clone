@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """module of BaseModel class"""
 
+import models
 from uuid import uuid4
 from datetime import datetime
-
 
 class BaseModel:
     """ BaseModel """
@@ -13,6 +13,7 @@ class BaseModel:
         date = "%Y-%m-%dT%H:%M:%S.%f"
 
         if not kwargs:
+            models.storage.new(self)
             self.created_at = datetime.now()
             self.id = str(uuid4())
         else:
@@ -37,4 +38,5 @@ class BaseModel:
 
     def save(self):
         """Updates with the datetime"""
+        models.storage.save()
         self.updated_at = datetime.now()
