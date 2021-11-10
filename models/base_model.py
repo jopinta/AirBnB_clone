@@ -8,11 +8,19 @@ from datetime import datetime
 class BaseModel:
     """ BaseModel """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """class constructor"""
-        self.id = str(uuid4())
-        self.updated_at = datetime.now()
-        self.created_at = datetime.now()
+        date = "%Y-%m-%dT%H:%M:%S.%f"
+
+        if not kwargs:
+            self.created_at = datetime.now()
+            self.id = str(uuid4())
+        else:
+            for key, value in kwargs.items():
+                if key == "updated_at" or key == "created_at":
+                    res = datetime.strptime(value, date)
+                if key != "__class__":
+                    setattr(self, key, res)
 
     def __str__(self):
         """ STR method for BaseModel"""
