@@ -9,7 +9,7 @@ class HBNBCommand(cmd.Cmd):
     """class definition"""
 
     def do_quit(self, arg):
-        """ to quit
+        """Quit command to exit the program
 """
         return 1
 
