@@ -5,6 +5,9 @@
 from models.base_model import BaseModel
 import json
 
+
+model = {"BaseModel": BaseModel}
+
 class FileStorage():
     """ FileStorage class """
 
@@ -13,31 +16,29 @@ class FileStorage():
 
     def all(self):
         """Returns the dictionary"""
-        return FileStorage.__objects
+        return self.__objects
 
     def new(self, obj):
         """ Set de object with the key """
         id = str(obj.id)
         newObj = str(obj.__class__.__name__)
         keyValue = newObj + "." + id
-        FileStorage.__objects[keyValue] = obj
-
+        self.__objects[keyValue] = obj
 
     def save(self):
         """ Serializes objets to JSON file"""
         dictionary_tmp = {}
-        for key in FileStorage.__objects:
-            dictionary_tmp[key] = FileStorage.__objects[key].to_dict()
-        with open(FileStorage.__file_path, "w") as FileObj:
-            json.dump(dictionary_tmp, FileObj)
+        for key in self.__objects:
+            dictionary_tmp[key] = self.__objects[key].to_dict()
+        with open(self.__file_path, "w") as file:
+            json.dump(dictionary_tmp, file)
 
-    
     def reload(self):
         """ Deserializes the  JSON file """
         try:
-            with open(FileStorage.__file_path, "r") as FileJSON:
-                JSON = json.load(FileJSON)
-            for key, value in JSON.items():
+            with open(self.__file_path, "r") as file:
+                j = json.load(file)
+            for key, value in j.items():
                 self.__objects[key] = BaseModel(**value)
         except:
             pass
