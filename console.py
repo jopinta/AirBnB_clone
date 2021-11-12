@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split(" ")
         if (len(args)) == 0:
             print ("** class name missing **")
-            return 0
+
         if args[0] not in newdict:
             print ("** class doesn't exist **")
         else:
@@ -50,7 +50,10 @@ class HBNBCommand(cmd.Cmd):
                     print ("** instance id missing **")
             else:
                     element = arg[0] + "." + arg[1]
-                    print (models.storage.all()[element])
+                    if element in models.storage.all():
+                            print (models.storage.all()[element])
+                    else:
+                            print("** no instance found **")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
