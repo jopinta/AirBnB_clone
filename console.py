@@ -54,6 +54,10 @@ class HBNBCommand(cmd.Cmd):
                             print (models.storage.all()[element])
                     else:
                             print("** no instance found **")
-
+    
+    def emptyline(self):
+        ''' empty line '''
+        pass
+        
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
