@@ -4,7 +4,9 @@
 
 import cmd
 from models.base_model import BaseModel
+import models
 import sys
+
 newdict = {"BaseModel": BaseModel}
 args = []
 
