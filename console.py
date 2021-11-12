@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print ("** class doesn't exist **")
 
- def do_show(self, arg):
+    def do_show(self, arg):
         """Prints the string representation"""
         args = arg.split(" ")
         if (len(args)) == 0:
