@@ -13,9 +13,9 @@ class BaseModel:
         date = "%Y-%m-%dT%H:%M:%S.%f"
 
         if not kwargs:
-            models.storage.new(self)
             self.created_at = datetime.now()
             self.id = str(uuid4())
+            models.storage.new(self)
         else:
             for key, value in kwargs.items():
                 if key == "updated_at" or key == "created_at":
@@ -37,6 +37,6 @@ class BaseModel:
         return dicc
 
     def save(self):
-        """Updates with the datetime"""
-        models.storage.save()
+        """ save """
         self.updated_at = datetime.now()
+        models.storage.save()
