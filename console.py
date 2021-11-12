@@ -32,5 +32,20 @@ class HBNBCommand(cmd.Cmd):
         else:
             print ("** class doesn't exist **")
 
+ def do_show(self, arg):
+        """Prints the string representation"""
+        args = arg.split(" ")
+        if (len(args)) == 0:
+            print ("** class name missing **")
+            return 0
+        if args[0] not in newdict:
+            print ("** class doesn't exist **")
+
+            if (len(args)) == 1:
+                    print ("")
+        else:
+                    element = arg[0] + "." + arg[1]
+                    print (models.storage.all()[element])
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
