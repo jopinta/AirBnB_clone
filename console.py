@@ -45,10 +45,10 @@ class HBNBCommand(cmd.Cmd):
             return 0
         if args[0] not in newdict:
             print ("** class doesn't exist **")
-
-            if (len(args)) == 1:
-                    print ("")
         else:
+            if (len(args)) == 1:
+                    print ("** instance id missing **")
+            else:
                     element = arg[0] + "." + arg[1]
                     print (models.storage.all()[element])
 
