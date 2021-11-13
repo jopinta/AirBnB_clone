@@ -3,12 +3,9 @@
 """
 
 from models.base_model import BaseModel
+import models
 
 
 class State(BaseModel):
 
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """Constructor"""
-        super().__init__()
