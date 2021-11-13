@@ -8,6 +8,7 @@ import json
 
 model = {"BaseModel": BaseModel}
 
+
 class FileStorage():
     """ FileStorage class """
 
@@ -40,5 +41,5 @@ class FileStorage():
                 j = json.load(file)
             for key, value in j.items():
                 self.__objects[key] = BaseModel(**value)
-        except:
+        except Exception:
             pass
