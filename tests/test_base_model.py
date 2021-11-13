@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+'''Unitest for base_model'''
+import unittest
+from models.base_model import BaseModel
+
+class TestBase(unittest.TestCase):
+    """Test Cases"""
+    def test_Base(self):
+        '''Test'''
+        a = BaseModel()
+        a.name = "Fede"
+        self.assertEqual(b.name, "Fede")
