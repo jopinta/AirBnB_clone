@@ -9,10 +9,12 @@ import sys
 
 newdict = {"BaseModel": BaseModel}
 
+
 class HBNBCommand(cmd.Cmd):
     """ Class definition """
 
-    prompt =  "(hbnb) "
+    prompt = "(hbnb) "
+
     def do_quit(self, argument):
         """ Quit command to exit the program """
         return 1
@@ -24,32 +26,31 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, argument):
         """ Reates a new instance """
         args = split(argument)
-        if (len(args)) == 0:
-            print ("** class name missing **")
+        if(len(args)) == 0:
+            print("** class name missing **")
         elif args[0] == "BaseModel":
             instancia = BaseModel()
             instancia.save()
-            print (instancia.id)
+            print(instancia.id)
         else:
-            print ("** class doesn't exist **")
+            print("** class doesn't exist **")
 
     def do_show(self, argument):
         """ Prints the string representation """
         args = split(argument)
-        if (len(args)) == 0:
-            print ("** class name missing **")
+        if(len(args)) == 0:
+            print("** class name missing **")
         elif args[0] not in newdict:
-            print ("** class doesn't exist **")
+            print("** class doesn't exist **")
         else:
-            if (len(args)) == 1:
-                    print ("** instance id missing **")
+            if(len(args)) == 1:
+                print("** instance id missing **")
             else:
-                    element = args[0] + "." + args[1]
-                    if str(element) in models.storage.all():
-                            print (models.storage.all()[element])
-                    else:
-                            print("** no instance found **")
-    
+                element = args[0] + "." + args[1]
+                if str(element) in models.storage.all():
+                    print(models.storage.all()[element])
+                else:
+                    print("** no instance found **")
 
     def do_all(self, argument):
         """ Prints all string representation of all instances
@@ -73,6 +74,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """ empty line """
         pass
-        
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
