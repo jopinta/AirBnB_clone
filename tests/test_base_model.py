@@ -9,4 +9,4 @@ class TestBase(unittest.TestCase):
         '''Test'''
         a = BaseModel()
         a.name = "Fede"
-        self.assertEqual(b.name, "Fede")
+        self.assertEqual(a.name, "Fede")
