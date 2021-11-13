@@ -12,6 +12,6 @@ class TestBase(unittest.TestCase):
         a.name = "Fede"
         self.assertEqual(a.name, "Fede")
 
-        
+
 if __name__ == "__main__":
     unittest.main()
