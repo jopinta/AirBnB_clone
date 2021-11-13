@@ -7,7 +7,7 @@ import models
 
 
 class BaseModel():
-    """ BaseModel """
+    """new object BaseModel created """
 
     def __init__(self, *args, **kwargs):
         """Class constructor"""
@@ -26,7 +26,7 @@ class BaseModel():
                     setattr(self, key, value)
 
     def __str__(self):
-        """ STR method for BaseModel"""
+        """ STR method for BaseModel to print string rep"""
         return "[{}] ({}) {}".format(self.__class__.__name__,
                                      self.id, self.__dict__)
 
