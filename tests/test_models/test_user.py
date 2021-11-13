@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 '''Unitest for Users'''
 import unittest
@@ -13,7 +12,7 @@ class TestBase(unittest.TestCase):
         a = User()
         a.email = "Fede"
         self.assertEqual(a.email, "Fede")
-    
-    
+
+
 if __name__ == "__main__":
     unittest.main()
