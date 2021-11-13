@@ -13,6 +13,7 @@ class TestFileStorage(unittest.TestCase):
         a = FileStorage()
         self.assertTrue(type(a), FileStorage)
         self.assertTrue(isinstance(a, FileStorage))
-        
+
+
 if (__file__ == "__main__"):
     unittest.main()
