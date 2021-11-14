@@ -6,8 +6,15 @@ import cmd
 from models.base_model import BaseModel
 import models
 import sys
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
-newdict = {"BaseModel": BaseModel}
+newdict = {"BaseModel": BaseModel, "User": User, "State": State, "City": City,
+           "Amenity": Amenity, "Place": Place, "Review": Review}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -72,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
         print(list)
 
     def emptyline(self):
-        """ empty line """
+        """ empty line + ENter"""
         pass
 
     def do_destroy(self, argument):
