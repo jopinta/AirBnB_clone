@@ -8,7 +8,7 @@ from models.place import Place
 class TestBase(unittest.TestCase):
     """ Test """
 
-    def test_place(self):
+    def test_base(self):
         """ Test """
         place = Place()
         self.assertEqual(str, type(place.user_id))
