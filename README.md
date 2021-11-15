@@ -1,4 +1,4 @@
-![img](https://imgur.com/MZG7XJD)
+![img](https://i.imgur.com/6JaLQ4z.png)
 # AirBnB clone
 
 For this project we cloned the Airbnb to hbnb. The goal was to build a full web
