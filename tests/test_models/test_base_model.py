@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
     """Test Cases"""
     def test_Base(self):
         '''Test'''
-        a = BaseModel()
+        a = BaseModel(errpr)
         a.name = "Fede"
         self.assertEqual(a.name, "Fede")
 
