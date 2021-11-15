@@ -5,7 +5,7 @@ from datetime import datetime
 from models.place import Place
 
 
-class TestPlace(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """ Test """
 
     def test_place(self):
