@@ -7,10 +7,10 @@ from models.base_model import BaseModel
 from datetime import datetime
 
 
-class TestUser(unittest.TestCase):
+class TestPlace(unittest.TestCase):
     """ Test """
 
-    def test_user(self):
+    def test_place(self):
         """ Test """
         place = Place()
         self.assertEqual(str, type(place.user_id))
