@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Unitest for City"""
 import unittest
-from models.user import City
+from models.city import City
 
 
 class TestCity(unittest.TestCase):
