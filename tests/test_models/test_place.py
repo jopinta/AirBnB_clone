@@ -5,10 +5,10 @@ from datetime import datetime
 from models.place import Place
 
 
-class TestBase(unittest.TestCase):
+class TestPlace(unittest.TestCase):
     """ Test """
 
-    def test_base(self):
+    def test_place(self):
         """ Test """
         place = Place()
         self.assertEqual(str, type(place.user_id))
@@ -23,5 +23,5 @@ class TestBase(unittest.TestCase):
         self.assertEqual(float, type(place.longitude))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
