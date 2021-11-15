@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-'''Unitest for Users'''
+"""Unitest for Users"""
 import unittest
 from models.user import User
 
 
-class TestBase(unittest.TestCase):
-    '''Test Cases'''
+class TestUser(unittest.TestCase):
+    """Test Cases"""
 
     def test_User(self):
         '''Test'''
