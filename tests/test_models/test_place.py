@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """ Unittest for Place """
 import unittest
-import models
-from models.place import Place
-from models.base_model import BaseModel
 from datetime import datetime
+from models.place import Place
 
 
 class TestPlace(unittest.TestCase):
