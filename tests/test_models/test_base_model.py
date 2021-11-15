@@ -3,6 +3,8 @@
 import unittest
 from models.base_model import BaseModel
 
+m = BaseModel()
+
 
 class TestBase(unittest.TestCase):
     """ Test Cases """
@@ -25,7 +27,6 @@ class TestBase(unittest.TestCase):
 
     def test_to_dict(self):
         """ Test """
-        m = BaseModel()
         m.my_number = 21
         m.name = "Fede tilt"
         m_d = m.to_dict()
@@ -36,6 +37,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(m_d["__class__"], "BaseModel")
         self.assertEqual(m_d["my_number"], 21)
         self.assertEqual(m_d["name"], "Fede tilt")
+
+    def test_str(self):
+        """ Test """
+        string = f"[{type(m).__name__}] ({m.id}) {m.__dict__}"
+        self.assertEqual(string, str(m))
 
 
 if __name__ == "__main__":
