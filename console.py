@@ -18,7 +18,7 @@ newdict = {"BaseModel": BaseModel, "User": User, "State": State, "City": City,
 
 
 class HBNBCommand(cmd.Cmd):
-    """ Class definition """
+    """ Class definition !"""
 
     prompt = "(hbnb) "
 
