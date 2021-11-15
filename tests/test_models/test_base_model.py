@@ -40,8 +40,8 @@ class TestBase(unittest.TestCase):
 
     def test_str(self):
         """ Test """
-        string = f"[{type(m).__name__}] ({m.id}) {m.__dict__}"
-        self.assertEqual(string, str(m))
+        s = f"[{type(m).__name__}] ({m.id}) {m.__dict__}"
+        self.assertEqual(s, str(m))
 
 
 if __name__ == "__main__":
