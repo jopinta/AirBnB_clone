@@ -7,7 +7,7 @@ font-size: 14px;
 font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-container { 
+.container { 
 
 background-color: aqua;
 max-width: 1000px;
