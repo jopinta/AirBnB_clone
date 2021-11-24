@@ -59,3 +59,17 @@
     }
 
 
+.popover{
+    display: none;
+    
+}
+
+.filters div:hover .popover{
+    display: block;
+}
+
+.filters li {
+    list-style: none;
+    margin: 5px;
+}
+
