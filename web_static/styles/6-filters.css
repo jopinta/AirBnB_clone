@@ -62,7 +62,7 @@
 .popover{
     display: none;
     background-color: #FAFAFA;
-    
+
     
 }
 
@@ -73,5 +73,6 @@
 .filters li {
     list-style: none;
     margin: 5px;
+    padding-left: 10;
 }
 
