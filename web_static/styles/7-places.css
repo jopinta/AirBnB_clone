@@ -1,7 +1,8 @@
 .places {
+    display: flex;
     position: relative;
     margin-top: 30px;
-    
+    flex-wrap: wrap;
 
 
 }
@@ -13,17 +14,18 @@
 }
 
 .places article {
-
+    display: flex;
     width: 390px;
     padding: 20px;
     margin: 20px;
     border: solid #FF5A5F 1px;
     border-radius: 4px;
+    justify-content: center;
 } 
 
 
 
-.places h2{
+article h2{
     font-size: 30px;
     text-align: center;
 }
