@@ -1,31 +1,22 @@
+article {
+width: 390px;
+padding: 20;
+margin: 20px;
+border: solid #FF5A5F 1px; 
+border-radius: 4px;
+display: inline-block;
+}
+
 .places {
+    margin-bottom: 50px;
     display: flex;
-    position: relative;
-    margin-top: 30px;
-    flex-wrap: wrap;
-
-
-}
-.places h1{
-    text-align: left;
-    font-size: 30px;
-    padding-left: 20;
-    
-}
-
-.places article {
-    display: flex;
-    width: 390px;
-    padding: 20px;
-    margin: 20px;
-    border: solid #FF5A5F 1px;
-    border-radius: 4px;
     justify-content: center;
-} 
-
-
-
-article h2{
-    font-size: 30px;
+    flex-wrap: wrap;    
     text-align: center;
+}
+
+h1{
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
 }
